@@ -4,7 +4,6 @@ FROM centos/systemd
 
 LABEL maintainer="peiminmin"
 
-ENV user=devops
 ENV ssh_port=22
 
 # install ssh server and configure
