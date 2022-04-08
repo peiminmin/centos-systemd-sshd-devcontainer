@@ -10,9 +10,10 @@ Software architecture description
 
 #### Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. build image ：docker build -t xxx/xxx:xxx
+2. run container：docker run --rm -d --privileged -p 8822:22 xxx/xxx:xxx
+3. ssh login：ssh root@127.0.0.1 -p 8822
+
 
 #### Contribution
 
