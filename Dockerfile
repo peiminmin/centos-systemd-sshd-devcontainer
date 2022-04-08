@@ -19,6 +19,11 @@ RUN yum install -y openssh-server sudo && \
 # clean up
     yum clean all && \
     rm -rf /var/cache/yum
+# use tsinghua centos mirrors
+RUN sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
+         -e 's|^#baseurl=http://mirror.centos.org|baseurl=https://mirrors.tuna.tsinghua.edu.cn|g' \
+         -i.bak \
+         /etc/yum.repos.d/CentOS-*.repo
 
 RUN chpasswd && echo 'root:123456' | chpasswd
 
