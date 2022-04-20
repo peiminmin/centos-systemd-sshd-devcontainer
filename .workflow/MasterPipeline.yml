@@ -20,10 +20,12 @@ stages:
         repository: hub.docker.com
         username: totuto
         password: ymz921025
-        tag: ${GITEE_PIPELINE_BUILD_NUMBER}
+        tag: ${GITEE_BRANCH}
         dockerfile: ./Dockerfile
         isCache: false
         notify: []
+strategy:
+  blocking: true
 permissions:
   - role: admin
     members: []
