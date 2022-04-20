@@ -17,7 +17,7 @@ stages:
         name: build_docker
         displayName: 镜像构建
         type: account
-        repository: hub.docker.com
+        repository: hub.docker.com/tutotu/centos-systemd-sshd-devcontainer
         username: totuto
         password: ymz921025
         tag: ${GITEE_BRANCH}
