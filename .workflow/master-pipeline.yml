@@ -19,7 +19,7 @@ stages:
         displayName: 镜像构建
         type: cert
         certificate: a06a1e30-a2e4-013a-9c3f-2e64bcce1955
-        tag: ${GITEE_BRANCH}
+        tag: tutotu/centos-systemd-sshd-devcontainer:${GITEE_BRANCH}
         dockerfile: ./Dockerfile
         isCache: false
 permissions:
