@@ -1,7 +1,7 @@
 # centos-systemd-sshd-devcontainer
 
 #### Description
-centos 的开发容器，支持ssh，可以使用idea ssh远程连接
+CentOS's golang trust development container supports SSH. You can use idea SSH to connect remotely. ```It can't be used in online production environment```
 
 #### Software Architecture
 Software architecture description

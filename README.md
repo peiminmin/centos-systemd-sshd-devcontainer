@@ -1,7 +1,7 @@
 # centos-systemd-sshd-devcontainer
 
 #### 介绍
-centos 的开发容器，支持ssh，可以使用idea ssh远程连接
+centos 的golang rust开发容器，支持ssh，可以使用idea ssh远程连接,```不可用于线上生产环境```
 
 #### 软件架构
 软件架构说明
