@@ -12,7 +12,7 @@ RUN sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
          /etc/yum.repos.d/CentOS-*.repo
 
 # install ssh server and configure
-RUN yum groupinstall -y "Development Tools" && yum install -y openssh-server sudo && \
+RUN yum groupinstall -y "Development Tools" && yum install -y musl-dev && yum install -y openssh-server sudo && \
 # setup sshd, install sudo
     echo "RSAAuthentication yes" >> /etc/ssh/sshd_config && \
     echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config && \
