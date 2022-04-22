@@ -1,7 +1,5 @@
 FROM centos/systemd
 
-# ssh, systemd, passwordless sudo container for ansible target use etc
-
 LABEL maintainer="peiminmin"
 
 ENV ssh_port=22 PATH=$PATH:/usr/local/go/bin:/root/.cargo/bin
