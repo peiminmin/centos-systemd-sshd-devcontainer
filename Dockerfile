@@ -19,7 +19,6 @@ RUN yum groupinstall -y "Development Tools" && yum install -y openssh-server sud
     echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
     echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config && \
     systemctl enable sshd.service && \
-# clean up
     yum clean all && \
     rm -rf /var/cache/yum
 # use tsinghua centos mirrors
