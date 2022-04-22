@@ -19,7 +19,6 @@ RUN yum groupinstall -y "Development Tools" && yum install -y openssh-server sud
     systemctl enable sshd.service && \
     yum clean all && \
     rm -rf /var/cache/yum
-# use tsinghua centos mirrors
 
 RUN wget https://golang.google.cn/dl/go1.18.1.linux-amd64.tar.gz &&  tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz && rm -rf go1.18.1.linux-amd64.tar.gz
 
