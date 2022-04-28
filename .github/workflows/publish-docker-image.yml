@@ -7,8 +7,7 @@ on:
   # but only for the main branch
   push:
     branches:
-      - main
-      - master
+    - main
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -19,12 +18,7 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -61,5 +55,5 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}-${{ steps.time.outputs.time }}
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

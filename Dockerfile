@@ -1,7 +1,5 @@
 FROM centos/systemd
 
-# ssh, systemd, passwordless sudo container for ansible target use etc
-
 LABEL maintainer="peiminmin"
 
 ENV ssh_port=22 PATH=$PATH:/usr/local/go/bin:/root/.cargo/bin
@@ -19,10 +17,8 @@ RUN yum groupinstall -y "Development Tools" && yum install -y openssh-server sud
     echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
     echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config && \
     systemctl enable sshd.service && \
-# clean up
     yum clean all && \
     rm -rf /var/cache/yum
-# use tsinghua centos mirrors
 
 RUN wget https://golang.google.cn/dl/go1.18.1.linux-amd64.tar.gz &&  tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz && rm -rf go1.18.1.linux-amd64.tar.gz
 
