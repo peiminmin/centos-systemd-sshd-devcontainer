@@ -11,7 +11,7 @@ Software architecture description
 #### Instructions
 
 1. build image ：docker build -t xxx/xxx:xxx
-2. run container：docker run --rm -d --privileged -p 8822:22 xxx/xxx:xxx
+2. run container：docker run  -d --privileged -p 8822:22  -v /hostTest:/data  peiminmin/centos-systemd-sshd-devcontainer:main
 3. ssh login：ssh root@127.0.0.1 -p 8822
 
 
