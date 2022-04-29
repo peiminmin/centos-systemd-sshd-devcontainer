@@ -24,7 +24,7 @@ RUN wget https://golang.google.cn/dl/go1.18.1.linux-amd64.tar.gz &&  tar -C /usr
 
 RUN curl -sSf https://sh.rustup.rs | bash -s -- -y
 
-RUN wget https://www.kernel.org/pub/software/scm/git/git-2.36.0.tar.gz  && tar xf git-2.9.3.tar.gz && cd git-2.36.0 && make configure   && ./configure prefix=/usr/local/git/ && make && make install
+RUN wget https://www.kernel.org/pub/software/scm/git/git-2.36.0.tar.gz  && tar xf git-2.36.0.tar.gz && cd git-2.36.0 && make configure   && ./configure prefix=/usr/local/git/ && make && make install
 
 RUN yum install -y  zsh && chsh -s /bin/zsh  && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -- y
 
